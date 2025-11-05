@@ -72,9 +72,9 @@ const CesticTalentHub = () => {
 
   useEffect(() => {
     window.watsonAssistantChatOptions = {
-      integrationID: '43f4794e-e91e-4464-a8f1-beaa019a5309',
-      region: 'wxo-us-south',
-      serviceInstanceID: '727fcb04-1caa-4c7b-8051-138f5a41ee3d',
+      integrationID: '35cc817c-7c2f-4237-8040-ef0b5d33b098',
+      region: 'wxo-au-syd',
+      serviceInstanceID: '295771ac-d74d-4be7-a099-462113a456ac',
       headerConfig: {
         minimizeButtonIconType: 'close',
         showRestartButton: false
