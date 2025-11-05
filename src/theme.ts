@@ -3,17 +3,17 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import type { Shadows } from "@mui/material/styles/shadows";
 
-// Example soft shadow for all elevation levels (customize as needed)
-const softShadow = "0 2px 8px rgba(0, 0, 0, 0.1)";
+// CESTIC-inspired soft shadow for all elevation levels
+const softShadow = "0 2px 8px rgba(30, 58, 95, 0.15)";
 const allShadows: Shadows = Array(25).fill(softShadow) as Shadows;
 
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#84BF23", // Your primary color
+            main: "#215aa4", // CESTIC button blue
         },
         secondary: {
-            main: "#00407A", // Your secondary color
+            main: "#1e3a5f", // CESTIC navy
         },
     },
     shape: {

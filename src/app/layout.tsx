@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Talent Bot",
-    description: "Explora las soluciones inteligentes para selección de talento: IA, automatización y análisis avanzado de CVs para encontrar a los candidatos ideales.",
+    title: "CESTIC Talent Hub | Gestión de Talento - Ministerio de Defensa",
+    description: "Sistema inteligente de gestión de recursos humanos para CESTIC. Selección automatizada de personal técnico y militar mediante IA, análisis de perfiles y gestión de talento especializado en tecnologías de la información y comunicaciones para la Defensa Nacional.",
 };
 
 export default function RootLayout({

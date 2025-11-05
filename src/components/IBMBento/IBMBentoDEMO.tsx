@@ -67,7 +67,7 @@ declare global {
   }
 }
 
-const IBMBento = () => {
+const CesticTalentHub = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   useEffect(() => {
@@ -89,7 +89,7 @@ const IBMBento = () => {
         const invokeInitial = {
           input: {
             message_type: 'text',
-            text: 'IBM'
+            text: 'CESTIC'
           }
         };
         const sendOptions = { silent: true };
@@ -157,12 +157,12 @@ const IBMBento = () => {
   
 
   const cardStyle = {
-    bgcolor: '#1a1a1a',
+    bgcolor: '#1e3a5f', // CESTIC navy
     borderRadius: '20px',
     p: 3,
     height: '100%',
     color: '#fff',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+    boxShadow: '0 4px 12px rgba(30, 58, 95, 0.3)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -173,21 +173,21 @@ const IBMBento = () => {
     py: 1,
     borderRadius: '16px',
     fontSize: '13px',
-    backgroundColor: '#2a2a2a',
+    backgroundColor: '#3a4f66', // CESTIC dark overlay
     color: '#fff',
-    border: '1px solid #333',
+    border: '1px solid #5b7691',
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     transition: '0.3s',
     '&:hover': {
-      backgroundColor: '#3a3a3a',
-      boxShadow: '0 0 6px rgba(255,255,255,0.1)',
+      backgroundColor: '#5b7691', // CESTIC blue-gray
+      boxShadow: '0 0 6px rgba(91, 118, 145, 0.3)',
     },
   };  
 
   return (
-    <Box sx={{ backgroundColor: isChatOpen ? '#1f70c1' : '#0f0f0f', minHeight: '100vh', px: 3, py: 6 }}>
+    <Box sx={{ backgroundColor: isChatOpen ? '#5b7691' : '#e8e8e8', minHeight: '100vh', px: 3, py: 6 }}>
       {/* Botón flotante personalizado para abrir Watson Assistant */}
       <Box
         className="custom-launcher"
@@ -202,9 +202,9 @@ const IBMBento = () => {
           width: 100,
           height: 100,
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #1f70c1, #354de8)',
+          background: 'linear-gradient(135deg, #215aa4, #1e3a5f)', // CESTIC blue gradient
           color: '#fff',
-          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
+          boxShadow: '0 8px 24px rgba(30, 58, 95, 0.4)',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
@@ -212,20 +212,20 @@ const IBMBento = () => {
           transition: 'all 0.3s ease',
           '&:hover': {
             transform: 'translateY(-3px) scale(1.25)',
-            boxShadow: '0 12px 28px rgba(0, 0, 0, 0.5)',
+            boxShadow: '0 12px 28px rgba(33, 90, 164, 0.5)',
           },
         }}
       >
-        <Box sx={{ fontSize: 28 }}><Image src="/logos/bot.png" alt="IBM" width={100} height={100} /></Box>
+        <Box sx={{ fontSize: 28 }}><Image src="/logos/bot.png" alt="Asistente CESTIC RH" width={100} height={100} /></Box>
       </Box>
 
       {!isChatOpen && (
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} sx={{}}>
           <Box sx={{ ...cardStyle}} >
-            <Typography variant="h2" fontWeight="bold">Sobre TalentBot</Typography>
+            <Typography variant="h2" fontWeight="bold">CESTIC Talent Hub</Typography>
             <Typography variant="body2">
-              Diseñado para profesionales de Recursos Humanos que buscan identificar al mejor candidato para una vacante o generar publicaciones automatizadas para atraer nuevos talentos.
+              Sistema de gestión de talento diseñado para el personal de Recursos Humanos de CESTIC. Identifica candidatos cualificados para puestos técnicos y militares en tecnologías de la información, ciberseguridad y comunicaciones del Ministerio de Defensa.
             </Typography>
           </Box>
         </Grid>
@@ -243,7 +243,7 @@ const IBMBento = () => {
 
         <Grid item xs={12} md={4}>
           <Box sx={{ ...cardStyle}} >
-            <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>Tecnologías</Typography>
+            <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>Tecnologías de IA Implementadas</Typography>
             <Grid container spacing={2} justifyContent="flex-start" sx={{paddingTop:5, paddingBottom:5}}>
                 {technologies.map((tech, index) => (
                   <Grid item xs={6} sm={4} md={3} lg={4} key={index}>
@@ -252,7 +252,7 @@ const IBMBento = () => {
                         sx={{
                           width: '100%',
                           aspectRatio: '1 / 1',
-                          background: '#2a2a2a',
+                          background: '#3a4f66', // CESTIC dark overlay
                           borderRadius: '20px',
                           overflow: 'hidden',
                           display: 'flex',
@@ -260,10 +260,10 @@ const IBMBento = () => {
                           justifyContent: 'center',
                           p: 2,
                           transition: '0.3s ease',
-                          boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+                          boxShadow: '0 0 10px rgba(30, 58, 95, 0.3)',
                           '&:hover': {
                             transform: 'scale(1.05)',
-                            boxShadow: '0 0 15px rgba(255,255,255,0.15)',
+                            boxShadow: '0 0 15px rgba(91, 118, 145, 0.4)',
                           },
                         }}
                       >
@@ -288,20 +288,20 @@ const IBMBento = () => {
         <Grid item xs={12} md={4}>
           <Box sx={{ ...cardStyle}}>
             <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>
-              Características principales
+              Capacidades del Sistema
             </Typography>
             <Typography variant="body2" sx={{ color: '#ccc', mb: 3 }}>
-              Tecnología que combina IA, flujos automáticos y conocimientos de CVs para recomendar candidatos ideales.
+              Plataforma de IA avanzada para la selección de personal técnico especializado en defensa, ciberseguridad y sistemas de información críticos.
             </Typography>
 
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
-              <Box sx={{ ...chipStyle}}>📄 Base de conocimiento con CV en PDF</Box>
-              <Box sx={{ ...chipStyle}}>🤖 AI para sugerencias de candidatos</Box>
-              <Box sx={{ ...chipStyle}}>📬 Skills para enviar correos y agendar publicación</Box>
-              <Box sx={{ ...chipStyle}}>✍️ AI para redactar correos y generar publicaciones</Box>
-              <Box sx={{ ...chipStyle}}>🔗 Integración con APIs</Box>
+              <Box sx={{ ...chipStyle}}>🔒 Análisis de perfiles con acreditación de seguridad</Box>
+              <Box sx={{ ...chipStyle}}>🎯 IA especializada en talento técnico-militar</Box>
+              <Box sx={{ ...chipStyle}}>📊 Evaluación de competencias en ciberseguridad</Box>
+              <Box sx={{ ...chipStyle}}>✉️ Gestión automatizada de convocatorias</Box>
+              <Box sx={{ ...chipStyle}}>🔗 Integración con sistemas del Ministerio</Box>
             </Box>
-    
+
             <IconButton href="#" sx={{ mt: 3, alignSelf: 'flex-end' }}>
               <Launch sx={{ color: '#fff' }} />
             </IconButton>
@@ -344,7 +344,7 @@ const IBMBento = () => {
         <Grid item xs={12} md={4}>
           <Box sx={{ ...cardStyle}}>
             <Typography variant="h2" sx={{ fontWeight: 'bold', mb: 1 }}>
-              Automatiza tu reclutamiento
+              Selección inteligente para Defensa Nacional
             </Typography>
           </Box>
         </Grid>
@@ -354,21 +354,21 @@ const IBMBento = () => {
           <Box
             sx={{
               ...cardStyle,
-              backgroundColor: '#1f70c1',
+              backgroundColor: '#215aa4', // CESTIC button blue
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
           >
-            <Image src="/logos/bot.png" alt="IBM" width={200} height={170} />
+            <Image src="/logos/bot.png" alt="CESTIC Talent Hub" width={200} height={170} />
           </Box>
         </Grid>
 
         <Grid item xs={12} md={6} sx={{}}>
           <Box sx={{ ...cardStyle}} >
-            <Typography variant="h4" fontWeight="bold">Top 3 Candidatos</Typography>
+            <Typography variant="h4" fontWeight="bold">Candidatos Preseleccionados</Typography>
             <Typography variant="body2">
-              Resultado de una selección basada en IA y búsqueda, a partir del análisis de 34 CVs y 8 postulantes destacados.
+              Resultados de la selección basada en IA especializada para CESTIC. Análisis exhaustivo de perfiles técnicos con evaluación de competencias en sistemas TIC, ciberseguridad y cumplimiento de requisitos de seguridad nacional.
             </Typography>
           </Box>
         </Grid>
@@ -379,4 +379,4 @@ const IBMBento = () => {
   );
 };
 
-export default IBMBento;
+export default CesticTalentHub;

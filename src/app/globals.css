@@ -1,6 +1,14 @@
 :root {
-  --background: #fbfbfb;
-  --foreground: #1a1a1a;
+  /* Paleta CESTIC - Ministerio de Defensa España */
+  --cestic-navy: #1e3a5f;
+  --cestic-blue-gray: #5b7691;
+  --cestic-button-blue: #215aa4;
+  --cestic-light-gray: #e8e8e8;
+  --cestic-white: #ffffff;
+  --cestic-dark-overlay: #3a4f66;
+
+  --background: #e8e8e8;
+  --foreground: #1e3a5f;
 }
 
 html,
