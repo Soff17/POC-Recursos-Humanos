@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, IconButton, Tooltip, Button, AppBar, Toolbar, Chip, LinearProgress } from '@mui/material';
+import { Box, Typography, Grid, Tooltip, AppBar, Toolbar, Chip } from '@mui/material';
 import {
-  Launch,
   Security,
   Psychology,
   Assessment,
-  Email,
   IntegrationInstructions,
-  Search,
-  TrendingUp,
-  Groups,
-  Assignment,
   Shield,
   LocationOn,
   Phone,
-  LinkedIn,
-  Twitter,
   Language
 } from '@mui/icons-material';
 import Image from 'next/image';
@@ -182,24 +174,6 @@ const CesticTalentHub = () => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-  };
-
-  const chipStyle = {
-    px: 2,
-    py: 1,
-    borderRadius: '16px',
-    fontSize: '13px',
-    backgroundColor: '#3a4f66',
-    color: '#fff',
-    border: '1px solid #5b7691',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: '0.3s',
-    '&:hover': {
-      backgroundColor: '#5b7691',
-      boxShadow: '0 0 6px rgba(91, 118, 145, 0.3)',
-    },
   };
 
   return (
