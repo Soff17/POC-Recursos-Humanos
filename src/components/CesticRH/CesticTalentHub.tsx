@@ -16,7 +16,7 @@ const technologies = [
     { name: 'watsonx.ai', link: '#' },
     { name: 'watsonx.orchestrate', link: '#' },
     { name: 'watson discovery', link: '#' },
-    { name: 'watson governance', link: '#' }
+    { name: 'watsonx.governance', link: '#' }
 ];
 
 interface WatsonAssistantReceiveEvent {
