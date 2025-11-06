@@ -98,7 +98,7 @@ const CesticTalentHub = () => {
         const invokeInitial = {
           input: {
             message_type: 'text',
-            text: 'CESTIC'
+            text: 'otrootro'
           }
         };
         const sendOptions = { silent: true };
