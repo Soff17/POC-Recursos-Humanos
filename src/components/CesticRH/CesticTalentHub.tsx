@@ -350,7 +350,7 @@ const CesticTalentHub = () => {
           <Grid item xs={12} md={4}>
             <Box sx={{ ...cardStyle, backgroundColor: '#fff', color: '#1e3a5f' }}>
               <Typography variant="h5" fontWeight={700} sx={{ mb: 3 }}>
-                Tecnologías IA
+                Tecnologías
               </Typography>
               <Grid container spacing={2}>
                 {technologies.map((tech, index) => {
@@ -435,6 +435,9 @@ const CesticTalentHub = () => {
                 Impulsado por
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Box sx={{ backgroundColor: '#1e3a5f', borderRadius: '12px', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Image src="/logos/ibm.png" alt="IBM" width={120} height={50} />
+                </Box>
                 <Box sx={{ backgroundColor: '#e01288', borderRadius: '12px', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Image src="/logos/nds.png" alt="NDS" width={140} height={80} />
                 </Box>
