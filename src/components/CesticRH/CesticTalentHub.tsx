@@ -13,9 +13,10 @@ import {
 import Image from 'next/image';
 
 const technologies = [
-    { name: 'rag', img: '/logos/rag.png', link: '#' },
-    { name: 'llm', img: '/logos/llm.png', link: '#' },
-    { name: 'genai', img: '/logos/genAI.png', link: '#' }
+    { name: 'watsonx.ai', link: '#' },
+    { name: 'watsonx.orchestrate', link: '#' },
+    { name: 'watson discovery', link: '#' },
+    { name: 'watson governance', link: '#' }
 ];
 
 interface WatsonAssistantReceiveEvent {
@@ -267,7 +268,7 @@ const CesticTalentHub = () => {
             <Grid item xs={12} md={4}>
               <Box sx={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '16px', p: 3, backdropFilter: 'blur(10px)' }}>
                 <Typography variant="h3" fontWeight={800} sx={{ color: '#fff' }}>
-                  8
+                  10
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#b0c4de' }}>
                   Candidatos Preseleccionados
@@ -280,7 +281,7 @@ const CesticTalentHub = () => {
                   3
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#b0c4de' }}>
-                  Convocatorias Activas
+                  Mejores Candidatos
                 </Typography>
               </Box>
             </Grid>
@@ -334,9 +335,9 @@ const CesticTalentHub = () => {
                   <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start', mb: 3 }}>
                     <IntegrationInstructions sx={{ fontSize: 32, color: '#215aa4' }} />
                     <Box>
-                      <Typography variant="subtitle1" fontWeight={600}>Integración Ministerial</Typography>
+                      <Typography variant="subtitle1" fontWeight={600}>Gestión Automatizada</Typography>
                       <Typography variant="body2" sx={{ color: '#5b7691' }}>
-                        Conectado con sistemas centrales del Ministerio de Defensa
+                        Generación automática de convocatorias y publicaciones
                       </Typography>
                     </Box>
                   </Box>
@@ -352,41 +353,44 @@ const CesticTalentHub = () => {
                 Tecnologías IA
               </Typography>
               <Grid container spacing={2}>
-                {technologies.map((tech, index) => (
-                  <Grid item xs={6} key={index}>
-                    <Tooltip title={tech.name} placement="top">
+                {technologies.map((tech, index) => {
+                  const colors = ['#1e3a5f', '#215aa4', '#3a4f66', '#5b7691'];
+                  return (
+                    <Grid item xs={6} key={index}>
                       <Box
                         sx={{
                           width: '100%',
                           aspectRatio: '1 / 1',
-                          background: '#f5f5f5',
+                          background: colors[index % colors.length],
                           borderRadius: '12px',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           p: 2,
                           transition: '0.3s ease',
-                          border: '2px solid #e8e8e8',
+                          border: '2px solid transparent',
+                          cursor: 'pointer',
                           '&:hover': {
                             transform: 'scale(1.05)',
-                            borderColor: '#215aa4',
+                            borderColor: '#fff',
                           },
                         }}
                       >
-                        <Box
-                          component="img"
-                          src={tech.img}
-                          alt={tech.name}
+                        <Typography
+                          variant="body1"
+                          fontWeight={600}
                           sx={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'contain',
+                            color: '#fff',
+                            textAlign: 'center',
+                            fontSize: { xs: '0.85rem', md: '0.95rem' }
                           }}
-                        />
+                        >
+                          {tech.name}
+                        </Typography>
                       </Box>
-                    </Tooltip>
-                  </Grid>
-                ))}
+                    </Grid>
+                  );
+                })}
               </Grid>
             </Box>
           </Grid>
@@ -428,7 +432,7 @@ const CesticTalentHub = () => {
           <Grid item xs={12} md={4}>
             <Box sx={{ ...cardStyle, backgroundColor: '#fff', color: '#1e3a5f', gap: 2 }}>
               <Typography variant="h5" fontWeight={700} sx={{ mb: 2 }}>
-                Colaboradores
+                Impulsado por
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <Box sx={{ backgroundColor: '#e01288', borderRadius: '12px', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

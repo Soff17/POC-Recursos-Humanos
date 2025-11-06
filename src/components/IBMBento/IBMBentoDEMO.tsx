@@ -372,7 +372,7 @@ const CesticTalentHub = () => {
             </Typography>
           </Box>
         </Grid>
-        
+
       </Grid>
       )}
     </Box>
