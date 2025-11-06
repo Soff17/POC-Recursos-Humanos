@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, Tooltip, AppBar, Toolbar, Chip } from '@mui/material';
+import { Box, Typography, Grid, AppBar, Toolbar, Chip } from '@mui/material';
 import {
   Security,
   Psychology,
