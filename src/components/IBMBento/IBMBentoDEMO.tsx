@@ -89,7 +89,7 @@ const CesticTalentHub = () => {
         const invokeInitial = {
           input: {
             message_type: 'text',
-            text: 'otrootro'
+            text: 'gobierno'
           }
         };
         const sendOptions = { silent: true };
