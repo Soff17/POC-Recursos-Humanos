@@ -99,7 +99,7 @@ const CesticTalentHub = () => {
         const invokeInitial = {
           input: {
             message_type: 'text',
-            text: 'gobierno'
+            text: 'orquestador'
           }
         };
         const sendOptions = { silent: true };
