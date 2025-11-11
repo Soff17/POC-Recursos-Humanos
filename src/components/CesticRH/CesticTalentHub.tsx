@@ -7,7 +7,6 @@ import {
   IntegrationInstructions,
   Shield,
   LocationOn,
-  Phone,
   Language
 } from '@mui/icons-material';
 import Image from 'next/image';
@@ -481,10 +480,6 @@ const CesticTalentHub = () => {
                   <Typography variant="body2" sx={{ color: '#b0c4de' }}>Madrid, España</Typography>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <Phone sx={{ fontSize: 20, color: '#b0c4de' }} />
-                  <Typography variant="body2" sx={{ color: '#b0c4de' }}>+34 91 XXX XX XX</Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <Language sx={{ fontSize: 20, color: '#b0c4de' }} />
                   <Typography variant="body2" sx={{ color: '#b0c4de' }}>www.defensa.gob.es/cestic</Typography>
                 </Box>
@@ -506,12 +501,6 @@ const CesticTalentHub = () => {
               </Box>
             </Grid>
           </Grid>
-
-          <Box sx={{ borderTop: '1px solid #3a4f66', mt: 4, pt: 3, textAlign: 'center' }}>
-            <Typography variant="body2" sx={{ color: '#b0c4de' }}>
-              © 2025 Ministerio de Defensa - CESTIC. Todos los derechos reservados.
-            </Typography>
-          </Box>
         </Box>
       </Box>
       )}
