@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Box, Typography, Grid, AppBar, Toolbar, Chip } from '@mui/material';
 import {
   Security,
@@ -77,8 +77,6 @@ declare global {
 }
 
 const CesticTalentHub = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-
   useEffect(() => {
     window.watsonAssistantChatOptions = {
       integrationID: '35cc817c-7c2f-4237-8040-ef0b5d33b098',
@@ -153,16 +151,6 @@ const CesticTalentHub = () => {
     script.src = 'https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js';
     document.head.appendChild(script);
   }, []);
-
-  useEffect(() => {
-    const listener = (e: CustomEvent) => {
-      setIsChatOpen(e.detail);
-    };
-
-    window.addEventListener('watson-chat-open', listener as EventListener);
-    return () => window.removeEventListener('watson-chat-open', listener as EventListener);
-  }, []);
-
 
   const cardStyle = {
     bgcolor: '#1e3a5f',
