@@ -12,10 +12,10 @@ import {
 import Image from 'next/image';
 
 const technologies = [
-    { name: 'watsonx.ai', link: '#' },
-    { name: 'watsonx.orchestrate', link: '#' },
-    { name: 'watson discovery', link: '#' },
-    { name: 'watsonx.governance', link: '#' }
+    { name: 'watsonx.ai', link: 'https://www.ibm.com/es-es/products/watsonx-ai' },
+    { name: 'watsonx.orchestrate', link: 'https://www.ibm.com/products/watsonx-orchestrate' },
+    { name: 'watson.discovery', link: 'https://www.ibm.com/es-es/products/watson-discovery' },
+    { name: 'watsonx.governance', link: 'https://www.ibm.com/es-es/products/watsonx-governance' }
 ];
 
 interface WatsonAssistantReceiveEvent {
@@ -177,7 +177,7 @@ const CesticTalentHub = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: isChatOpen ? '#5b7691' : '#f5f5f5', minHeight: '100vh' }}>
+    <Box sx={{ backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
       {/* Header Institucional */}
       <AppBar position="sticky" sx={{ backgroundColor: '#1e3a5f', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
         <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
@@ -234,7 +234,6 @@ const CesticTalentHub = () => {
         <Box sx={{ fontSize: 28 }}><Image src="/logos/bot.png" alt="Asistente CESTIC RH" width={100} height={100} /></Box>
       </Box>
 
-      {!isChatOpen && (
       <Box>
         {/* Hero Section */}
         <Box sx={{
@@ -257,7 +256,7 @@ const CesticTalentHub = () => {
             <Grid item xs={12} md={4}>
               <Box sx={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '16px', p: 3, backdropFilter: 'blur(10px)' }}>
                 <Typography variant="h3" fontWeight={800} sx={{ color: '#fff' }}>
-                  34
+                  756
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#b0c4de' }}>
                   CVs Analizados
@@ -291,13 +290,13 @@ const CesticTalentHub = () => {
         <Box sx={{ px: 4, py: 6 }}>
         <Grid container spacing={3}>
           {/* Capacidades del Sistema */}
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={9}>
             <Box sx={{ ...cardStyle, backgroundColor: '#fff', color: '#1e3a5f' }}>
-              <Typography variant="h5" fontWeight={700} sx={{ mb: 3 }}>
+              <Typography variant="h5" fontWeight={700} sx={{ mb: 5 }}>
                 Capacidades del Sistema
               </Typography>
               <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={8}>
                   <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start', mb: 3 }}>
                     <Security sx={{ fontSize: 32, color: '#215aa4' }} />
                     <Box>
@@ -308,7 +307,7 @@ const CesticTalentHub = () => {
                     </Box>
                   </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={8}>
                   <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start', mb: 3 }}>
                     <Psychology sx={{ fontSize: 32, color: '#215aa4' }} />
                     <Box>
@@ -319,7 +318,7 @@ const CesticTalentHub = () => {
                     </Box>
                   </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={8}>
                   <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start', mb: 3 }}>
                     <Assessment sx={{ fontSize: 32, color: '#215aa4' }} />
                     <Box>
@@ -330,7 +329,7 @@ const CesticTalentHub = () => {
                     </Box>
                   </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={8}>
                   <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start', mb: 3 }}>
                     <IntegrationInstructions sx={{ fontSize: 32, color: '#215aa4' }} />
                     <Box>
@@ -346,7 +345,7 @@ const CesticTalentHub = () => {
           </Grid>
 
           {/* Tecnologías */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={3}>
             <Box sx={{ ...cardStyle, backgroundColor: '#fff', color: '#1e3a5f' }}>
               <Typography variant="h5" fontWeight={700} sx={{ mb: 3 }}>
                 Tecnologías
@@ -357,6 +356,8 @@ const CesticTalentHub = () => {
                   return (
                     <Grid item xs={6} key={index}>
                       <Box
+                        component="button"
+                        onClick={() => window.open(tech.link, '_blank')}
                         sx={{
                           width: '100%',
                           aspectRatio: '1 / 1',
@@ -366,13 +367,22 @@ const CesticTalentHub = () => {
                           alignItems: 'center',
                           justifyContent: 'center',
                           p: 2,
-                          transition: '0.3s ease',
+                          transition: 'all 0.3s ease',
                           border: '2px solid transparent',
                           cursor: 'pointer',
+                          outline: 'none',
                           '&:hover': {
                             transform: 'scale(1.05)',
                             borderColor: '#fff',
+                            boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
                           },
+                          '&:active': {
+                            transform: 'scale(0.98)',
+                          },
+                          '&:focus': {
+                            borderColor: '#fff',
+                            boxShadow: '0 0 0 3px rgba(255, 255, 255, 0.3)',
+                          }
                         }}
                       >
                         <Typography
@@ -395,7 +405,7 @@ const CesticTalentHub = () => {
           </Grid>
 
           {/* Video Demo */}
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={9}>
             <Box
               sx={{
                 ...cardStyle,
@@ -428,7 +438,7 @@ const CesticTalentHub = () => {
           </Grid>
 
           {/* Partners */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={3}>
             <Box sx={{ ...cardStyle, backgroundColor: '#fff', color: '#1e3a5f', gap: 2 }}>
               <Typography variant="h5" fontWeight={700} sx={{ mb: 2 }}>
                 Impulsado por
@@ -436,9 +446,6 @@ const CesticTalentHub = () => {
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <Box sx={{ backgroundColor: '#1e3a5f', borderRadius: '12px', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Image src="/logos/ibm.png" alt="IBM" width={120} height={50} />
-                </Box>
-                <Box sx={{ backgroundColor: '#e01288', borderRadius: '12px', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Image src="/logos/nds.png" alt="NDS" width={140} height={80} />
                 </Box>
                 <Box sx={{ backgroundColor: '#f5f5f5', borderRadius: '12px', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Image src="/logos/kp.png" alt="Knowledge Partner" width={120} height={100} />
@@ -459,7 +466,7 @@ const CesticTalentHub = () => {
           mt: 8
         }}>
           <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={7}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
                 <Shield sx={{ fontSize: 40 }} />
                 <Typography variant="h6" fontWeight={700}>CESTIC</Typography>
@@ -472,7 +479,7 @@ const CesticTalentHub = () => {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Typography variant="h6" fontWeight={600} sx={{ mb: 2 }}>Contacto</Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -485,25 +492,9 @@ const CesticTalentHub = () => {
                 </Box>
               </Box>
             </Grid>
-
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" fontWeight={600} sx={{ mb: 2 }}>Información Legal</Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                <Typography variant="body2" sx={{ color: '#b0c4de', cursor: 'pointer', '&:hover': { color: '#fff' } }}>
-                  Política de Privacidad
-                </Typography>
-                <Typography variant="body2" sx={{ color: '#b0c4de', cursor: 'pointer', '&:hover': { color: '#fff' } }}>
-                  Normativa de Seguridad
-                </Typography>
-                <Typography variant="body2" sx={{ color: '#b0c4de', cursor: 'pointer', '&:hover': { color: '#fff' } }}>
-                  Aviso Legal
-                </Typography>
-              </Box>
-            </Grid>
           </Grid>
         </Box>
-      </Box>
-      )}
+        </Box>
     </Box>
   );
 };
