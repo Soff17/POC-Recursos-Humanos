@@ -458,9 +458,6 @@ const CesticTalentHub = () => {
                 <Shield sx={{ fontSize: 40 }} />
                 <Typography variant="h6" fontWeight={700}>Talent HUB</Typography>
               </Box>
-              <Typography variant="body2" sx={{ color: '#b0c4de', mb: 2 }}>
-                Centro de Sistemas y Tecnologías de la Información y las Comunicaciones
-              </Typography>
               <Typography variant="caption" sx={{ color: '#b0c4de' }}>
                 España
               </Typography>
