@@ -6,8 +6,7 @@ import {
   Assessment,
   IntegrationInstructions,
   Shield,
-  LocationOn,
-  Language
+  LocationOn
 } from '@mui/icons-material';
 import Image from 'next/image';
 
