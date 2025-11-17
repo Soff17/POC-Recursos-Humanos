@@ -173,10 +173,10 @@ const CesticTalentHub = () => {
             <Shield sx={{ fontSize: 40, color: '#fff' }} />
             <Box>
               <Typography variant="h6" fontWeight={700} sx={{ color: '#fff', letterSpacing: '0.5px' }}>
-                CESTIC Talent Hub
+                Talent Hub
               </Typography>
               <Typography variant="caption" sx={{ color: '#b0c4de' }}>
-                Ministerio de Defensa - España
+                España
               </Typography>
             </Box>
           </Box>
@@ -219,7 +219,7 @@ const CesticTalentHub = () => {
           },
         }}
       >
-        <Box sx={{ fontSize: 28 }}><Image src="/logos/bot.png" alt="Asistente CESTIC RH" width={100} height={100} /></Box>
+        <Box sx={{ fontSize: 28 }}><Image src="/logos/bot.png" alt="Asistente Talent Hub" width={100} height={100} /></Box>
       </Box>
 
       <Box>
@@ -236,7 +236,7 @@ const CesticTalentHub = () => {
             Sistema Inteligente de Gestión de Talento
           </Typography>
           <Typography variant="h5" sx={{ color: '#b0c4de', mb: 5, fontWeight: 300 }}>
-            Selección automatizada de personal técnico y militar para CESTIC
+            Selección automatizada de personal técnico y militar
           </Typography>
 
           {/* Estadísticas */}
@@ -457,13 +457,13 @@ const CesticTalentHub = () => {
             <Grid item xs={12} md={7}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
                 <Shield sx={{ fontSize: 40 }} />
-                <Typography variant="h6" fontWeight={700}>CESTIC</Typography>
+                <Typography variant="h6" fontWeight={700}>Talent HUB</Typography>
               </Box>
               <Typography variant="body2" sx={{ color: '#b0c4de', mb: 2 }}>
                 Centro de Sistemas y Tecnologías de la Información y las Comunicaciones
               </Typography>
               <Typography variant="caption" sx={{ color: '#b0c4de' }}>
-                Ministerio de Defensa de España
+                España
               </Typography>
             </Grid>
 
@@ -473,10 +473,6 @@ const CesticTalentHub = () => {
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <LocationOn sx={{ fontSize: 20, color: '#b0c4de' }} />
                   <Typography variant="body2" sx={{ color: '#b0c4de' }}>Madrid, España</Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <Language sx={{ fontSize: 20, color: '#b0c4de' }} />
-                  <Typography variant="body2" sx={{ color: '#b0c4de' }}>www.defensa.gob.es/cestic</Typography>
                 </Box>
               </Box>
             </Grid>
